@@ -56,7 +56,7 @@
       "class_year": 11,
       "percentage": 87,
       "course": "Building an electric car",
-      "attending": true
+      "attending": false
     },
     {
       "id": 5963,
@@ -112,7 +112,7 @@
       "class_year": 12,
       "percentage": 73,
       "course": "Building an electric car",
-      "attending": true
+      "attending": false
     },
     {
       "id": 5998,

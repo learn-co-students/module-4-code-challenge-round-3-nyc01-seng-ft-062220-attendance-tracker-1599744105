@@ -16,7 +16,7 @@ class CourseContainer extends Component {
     //  this.setState({attending:!obj.attending })
     let status = !obj.attending 
     
-     fetch(`http://localhost:6001/students${obj.id}`, {
+     fetch(`http://localhost:6001/students/${obj.id}`, {
 
        method: 'PATCH',
        headers: {
