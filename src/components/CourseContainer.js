@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import CourseDetails from "./CourseDetails"
 import CourseSelector from "./CourseSelector"
 import StudentsList from "./StudentsList"
+import SortSelector from './SortSelector'
 
 class CourseContainer extends Component {
   state = {
@@ -49,6 +50,10 @@ class CourseContainer extends Component {
     this.setState({students: students})
   }
 
+  sortStudentsByName = (e) => {
+    console.log(e.target.value)
+  }
+
   render() {
     return (
       <div className="ui grid container">
@@ -57,6 +62,7 @@ class CourseContainer extends Component {
           courses={this.state.courses}
           courseSelectorHandler={this.courseSelectorHandler}
         />
+        <SortSelector sortStudentsByName={this.sortStudentsByName} />
         <StudentsList
           students={this.state.students}
           selectedCourse={this.state.selectedCourse}
