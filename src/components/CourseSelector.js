@@ -2,8 +2,8 @@ import React from "react";
 
 class CourseSelector extends React.Component {
 
-  changeHandler = (e) => {
-    this.props.changeCourse(e.target.value)
+  changeHandler = (event) => {
+    this.props.changeCourse(event.target.value)
   }
 
   render() {
