@@ -1,5 +1,6 @@
 import React from "react";
 
+
 const CourseDetails = props => {
   return (
     <div className="ui center aligned header sixteen wide column">

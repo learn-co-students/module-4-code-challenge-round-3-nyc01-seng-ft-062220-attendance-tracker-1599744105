@@ -1,10 +1,10 @@
 import React from "react";
 
-const Student = () => (
+const Student = (props) => (
   <tr style={{ textAlign: "center" }}>
-    <td>"...your code here"</td>
-    <td>"...your code here"</td>
-    <td>"...your code here"</td>
+    <td>{props.student.name}</td>
+    <td>{props.student.class_year}</td>
+    <td>{props.student.percentage}</td>
     <td>
       <input
         type="checkbox"
