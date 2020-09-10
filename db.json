@@ -40,7 +40,7 @@
       "class_year": 10,
       "percentage": 90,
       "course": "How to Meme",
-      "attending": false
+      "attending": true
     },
     {
       "id": 5955,
@@ -56,7 +56,7 @@
       "class_year": 11,
       "percentage": 87,
       "course": "Building an electric car",
-      "attending": false
+      "attending": true
     },
     {
       "id": 5963,
@@ -64,7 +64,7 @@
       "class_year": 9,
       "percentage": 74,
       "course": "Having a good time",
-      "attending": true
+      "attending": false
     },
     {
       "id": 5964,
@@ -80,7 +80,7 @@
       "class_year": 11,
       "percentage": 82,
       "course": "Rock Climbing",
-      "attending": true
+      "attending": false
     },
     {
       "id": 5974,

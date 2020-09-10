@@ -2,15 +2,8 @@ import React from "react";
 
 class CourseSelector extends React.Component {
 
-  state = {
-    selectedValue: ''
-  }
-
   changeHandler = (e) => {
-    this.setState({
-      selectedValue: e.target.value 
-    })
-    this.props.updateStudentsArray(e.target.value || this.state.selectedValue) 
+    this.props.changeCourse(e.target.value)
   }
 
   render() {

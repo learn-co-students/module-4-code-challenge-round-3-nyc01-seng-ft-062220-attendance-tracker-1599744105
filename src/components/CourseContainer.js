@@ -7,7 +7,17 @@ class CourseContainer extends Component {
 
   state = {
     studentsArray: [],
-    coursesArray: []
+    coursesArray: [],
+    selectedCourse: ''
+  }
+
+  changeCourse = (event) => {
+    this.setState({
+      selectedCourse: event.target.value
+    })
+    this.setState({
+      studentsArray: this.filterArray()
+    })
   }
 
   persistAttendance = (stud, someValue) => {
@@ -34,15 +44,9 @@ class CourseContainer extends Component {
     this.getCourses()
   }
 
-  updateStudentsArray = (course) => {
-    this.setState({
-      studentsArray: this.filterArray(course)
-    })
-  }
-
-  filterArray = (course) => {
+  filterArray = () => {
     return this.state.studentsArray.filter(student => {
-      return student.course === course
+      return student.course === this.state.selectedCourse
     })
   }
 
@@ -70,7 +74,7 @@ class CourseContainer extends Component {
     return (
       <div className="ui grid container">
         <CourseDetails />
-        <CourseSelector updateStudentsArray={this.updateStudentsArray} courses={this.state.coursesArray}/>
+        <CourseSelector changeCourse={this.changeCourse} courses={this.state.coursesArray}/>
         <StudentsList persistAttendance={this.persistAttendance} studentsArray={this.state.studentsArray}/>
       </div>
     );
