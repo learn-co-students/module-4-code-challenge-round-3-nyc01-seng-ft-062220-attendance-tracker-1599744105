@@ -1,8 +1,13 @@
 import React from "react";
 import Student from "./Student";
 
-const StudentsList = () => (
-  <table className="ui celled striped padded table unstackable">
+
+class StudentsList extends React.Component {
+
+
+  render() {
+    return (
+      <table className="ui celled striped padded table unstackable">
     <tbody>
       <tr>
         <th>
@@ -19,9 +24,11 @@ const StudentsList = () => (
         </th>
       </tr>
 
-      {/* a row per student should go here */}
+      {this.props.students.map(studentObj => <Student key={studentObj.id} student={studentObj} course={this.props.course} checkHandler={this.props.checkHandler} />)}
     </tbody>
   </table>
-);
+    )
+  }
+}
 
 export default StudentsList;
