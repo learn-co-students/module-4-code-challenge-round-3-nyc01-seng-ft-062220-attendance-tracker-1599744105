@@ -1,28 +1,43 @@
 import React from "react";
 
-const CourseSelector = props => {
-  return (
-    <div className="sixteen wide column">
-      <select
-        className="ui dropdown"
-        onChange={() => console.log("CourseSelector handle change here!")}
-        defaultValue="select"
-      >
-        {/* you shouldn't need to touch these options below */}
-        <option value="select" disabled>
-          Select a course
-        </option>
-        {props.courses.map(course => {
-          return (
-            <option key={course.id} className="item" value={course.id}>
-              {course.name}
-            </option>
-          );
-        })}
-      </select>
-    </div>
-  );
-};
+class CourseSelector extends React.Component {
+
+  state = {
+    selectedValue: ''
+  }
+
+  changeHandler = (e) => {
+    this.setState({
+      selectedValue: e.target.value 
+    })
+    this.props.updateStudentsArray(e.target.value || this.state.selectedValue) 
+  }
+
+  render() {
+    return (
+      <div className="sixteen wide column">
+        <select
+          className="ui dropdown"
+          onChange={this.changeHandler}
+          defaultValue="select"
+        >
+          {/* you shouldn't need to touch these options below */}
+          <option value="select" disabled>
+            Select a course
+          </option>
+          {this.props.courses.map(course => {
+            return (
+              <option key={course.id} className="item" value={course.name}>
+                {course.name}
+              </option>
+            );
+          })}
+        </select>
+      </div>
+    )
+  }
+}
+
 
 // This makes it so, when no courses are passed
 // CourseDetails will still get courses, but it will be an empty array.
