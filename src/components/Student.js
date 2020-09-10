@@ -1,15 +1,15 @@
 import React from "react";
 
-const Student = () => (
+const Student = (props) => (
   <tr style={{ textAlign: "center" }}>
-    <td>"...your code here"</td>
-    <td>"...your code here"</td>
-    <td>"...your code here"</td>
+    <td>{props.name}</td>
+    <td>{props.year}</td>
+    <td>{props.percentage}</td>
     <td>
       <input
         type="checkbox"
-        checked={null /* if true, this checkbox will be checked! */}
-        onClick={() => console.log("You clicked me!")}
+        checked={props.attending}
+        onClick={() => props.clickHandler(props.student)}
       />
     </td>
   </tr>

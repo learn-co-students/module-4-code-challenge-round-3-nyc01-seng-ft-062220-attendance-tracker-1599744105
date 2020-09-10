@@ -1,11 +1,12 @@
 import React from "react";
 
 const CourseSelector = props => {
+  
   return (
     <div className="sixteen wide column">
       <select
         className="ui dropdown"
-        onChange={() => console.log("CourseSelector handle change here!")}
+        onChange={(e) => props.selectedCourse(e)}
         defaultValue="select"
       >
         {/* you shouldn't need to touch these options below */}
@@ -14,7 +15,7 @@ const CourseSelector = props => {
         </option>
         {props.courses.map(course => {
           return (
-            <option key={course.id} className="item" value={course.id}>
+            <option key={course.id} className="item" name={course.name} value={course.name}>
               {course.name}
             </option>
           );
