@@ -7,14 +7,14 @@ class CourseContainer extends Component {
   state = {
     course: [],
     student: [],
-    selectedCourse: '',
-    
-    
+    selectedCourse: ''
   }
 
   statusClick = (obj) => {
-    //  this.setState({attending:!obj.attending })
+    let newArray = [...this.state.student]
     let status = !obj.attending 
+    obj.attending = status
+    this.setState({students: newArray})
     
      fetch(`http://localhost:6001/students/${obj.id}`, {
 
@@ -25,8 +25,6 @@ class CourseContainer extends Component {
         },
         body: JSON.stringify({attending: status} )
       })
-      .then(response => response.json())
-      
       }
   
 

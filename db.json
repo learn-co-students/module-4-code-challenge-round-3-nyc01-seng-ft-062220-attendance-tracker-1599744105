@@ -32,7 +32,7 @@
       "class_year": 11,
       "percentage": 93,
       "course": "Having a good time",
-      "attending": true
+      "attending": false
     },
     {
       "id": 5952,
@@ -40,7 +40,7 @@
       "class_year": 10,
       "percentage": 90,
       "course": "How to Meme",
-      "attending": true
+      "attending": false
     },
     {
       "id": 5955,
@@ -48,7 +48,7 @@
       "class_year": 10,
       "percentage": 72,
       "course": "Having a good time",
-      "attending": true
+      "attending": false
     },
     {
       "id": 5958,
@@ -128,7 +128,7 @@
       "class_year": 11,
       "percentage": 97,
       "course": "Rock Climbing",
-      "attending": false
+      "attending": true
     },
     {
       "id": 6002,
@@ -152,7 +152,7 @@
       "class_year": 12,
       "percentage": 76,
       "course": "Rock Climbing",
-      "attending": false
+      "attending": true
     },
     {
       "id": 6016,
@@ -168,7 +168,7 @@
       "class_year": 9,
       "percentage": 99,
       "course": "Building an electric car",
-      "attending": false
+      "attending": true
     },
     {
       "id": 6021,
@@ -176,7 +176,7 @@
       "class_year": 11,
       "percentage": 79,
       "course": "Building an electric car",
-      "attending": false
+      "attending": true
     },
     {
       "id": 6024,
@@ -200,7 +200,7 @@
       "class_year": 12,
       "percentage": 73,
       "course": "Rock Climbing",
-      "attending": false
+      "attending": true
     },
     {
       "id": 5941,
@@ -336,7 +336,7 @@
       "class_year": 9,
       "percentage": 77,
       "course": "Building an electric car",
-      "attending": true
+      "attending": false
     },
     {
       "id": 5995,
@@ -560,7 +560,7 @@
       "class_year": 10,
       "percentage": 87,
       "course": "Rock Climbing",
-      "attending": false
+      "attending": true
     },
     {
       "id": 6014,
@@ -568,7 +568,7 @@
       "class_year": 10,
       "percentage": 87,
       "course": "Building an electric car",
-      "attending": true
+      "attending": false
     },
     {
       "id": 6015,

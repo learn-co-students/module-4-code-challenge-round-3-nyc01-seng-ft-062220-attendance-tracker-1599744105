@@ -8,7 +8,9 @@ const Student = (props) => (
     <td>
       <input
         type="checkbox"
-        checked={props.attending}
+        checked={
+          props.attending 
+  }
         onClick={() => props.clickHandler(props.student)}
       />
     </td>
