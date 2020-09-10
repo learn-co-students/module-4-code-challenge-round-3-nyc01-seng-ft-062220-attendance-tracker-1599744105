@@ -8,7 +8,7 @@ class CourseContainer extends Component {
   state = {
     courses: [],
     students: [],
-    selectedCourse: null
+    selectedCourse: ""
   }
 
   componentDidMount(){
@@ -27,7 +27,7 @@ class CourseContainer extends Component {
   render() {
     return (
       <div className="ui grid container">
-        {/* <CourseDetails course={this.state.selectedCourse} /> */}
+        <CourseDetails course={this.state.selectedCourse} />
         <CourseSelector courses={this.state.courses} courseSelectorHandler={this.courseSelectorHandler} />
         <StudentsList students={this.state.students} selectedCourse={this.state.selectedCourse} />
       </div>

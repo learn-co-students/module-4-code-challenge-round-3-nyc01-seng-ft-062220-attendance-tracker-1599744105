@@ -3,8 +3,9 @@ import Student from "./Student";
 
 const StudentsList = (props) => {
 
-  let students = props.students.filter((students) => students.course === props.selectedCourse)
+  let students = props.students.filter((students) => students.course === props.selectedCourse.name)
   let studentCards = students.map((student) => <Student key={student.id} student={student} />)
+  
   return(
   <table className="ui celled striped padded table unstackable">
     <tbody>
