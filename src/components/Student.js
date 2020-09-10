@@ -1,6 +1,14 @@
 import React from "react";
 
-const Student = (props) => (
+const Student = (props) => {
+
+
+  let checkBoxHandler = () => {
+    props.checkBoxHandler(props.student)
+  } 
+return (
+
+
   <tr style={{ textAlign: "center" }}>
     <td>{props.student.name}</td>
     <td>{props.student.class_year}</td>
@@ -8,11 +16,11 @@ const Student = (props) => (
     <td>
       <input
         type="checkbox"
-        checked={null /* if true, this checkbox will be checked! */}
-        onClick={() => console.log("You clicked me!")}
+        checked={props.student.attending}
+        onClick={() => checkBoxHandler()}
       />
     </td>
   </tr>
-);
+)};
 
 export default Student;
