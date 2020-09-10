@@ -5,7 +5,6 @@ import StudentsList from "./StudentsList";
 
 class CourseContainer extends Component {
   state = {
-    students: [],
     courses: [], 
     selected: null
   }
@@ -16,12 +15,6 @@ class CourseContainer extends Component {
     .then(courses => this.setState({
       courses: courses
     }))
-
-    fetch('http://localhost:6001/students')
-    .then(resp => resp.json())
-    .then(info => this.setState({
-      students: info
-    }))
   }
   
   selectHandler = (courseObj) => {
@@ -31,14 +24,7 @@ class CourseContainer extends Component {
     }) 
   }
 
-  checkHandler = (checkObj) => {
-    console.log(checkObj)
-    
-  }
-
-  patchStudent = (checkObj) => {
-    fetch(`http://localhost:6001/students/${checkObj.id}`)
-  }
+  
 
   render() {
     console.log(this.state.selected)
@@ -46,7 +32,7 @@ class CourseContainer extends Component {
       <div className="ui grid container">
         <CourseDetails courses={this.state.courses} selected={this.state.selected} />
         <CourseSelector courses={this.state.courses} selectHandler={this.selectHandler} />
-        <StudentsList students={this.state.students} course={this.state.selected} checkHandler={this.checkHandler} />
+        <StudentsList course={this.state.selected}  />
       </div>
     );
   }

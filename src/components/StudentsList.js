@@ -3,6 +3,24 @@ import Student from "./Student";
 
 
 class StudentsList extends React.Component {
+  state = {
+    students: [],
+  }
+  componentDidMount(){
+    fetch('http://localhost:6001/students')
+    .then(resp => resp.json())
+    .then(students => this.setState({
+      students: students
+    }))
+  }
+
+  checkHandler = (checkObj) => {
+    console.log(checkObj)
+  }
+
+  patchStudent = (checkObj) => {
+    fetch(`http://localhost:6001/students/${checkObj.id}`)
+  }
 
 
   render() {
@@ -24,7 +42,7 @@ class StudentsList extends React.Component {
         </th>
       </tr>
 
-      {this.props.students.map(studentObj => <Student key={studentObj.id} student={studentObj} course={this.props.course} checkHandler={this.props.checkHandler} />)}
+      {this.state.students.map(studentObj => <Student key={studentObj.id} student={studentObj} course={this.props.course} checkHandler={this.checkHandler} />)}
     </tbody>
   </table>
     )
