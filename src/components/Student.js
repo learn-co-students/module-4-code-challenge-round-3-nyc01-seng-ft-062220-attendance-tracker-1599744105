@@ -9,7 +9,7 @@ const Student = (props) => (
       <input
         type="checkbox"
         checked={null /* if true, this checkbox will be checked! */}
-        onClick={() => console.log("You clicked me!")}
+        onClick={(e) => console.log("You clicked me!")}
       />
     </td>
   </tr>
